@@ -9,7 +9,11 @@ export const authSlice = createSlice({
     reducers: {
         setLogin: (state, action) => {
             state.isAuth = true;
-            state.phone = action.payload
+            state.phone = action.payload;
+        },
+        setLogout: (state, action) => {
+            state.isAuth = false;
+            state.phone = "";
         }
     }
 })
